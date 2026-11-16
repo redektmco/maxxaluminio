@@ -5,3 +5,5 @@ next-env.d.ts
 *.tsbuildinfo
 .impeccable/review
 .impeccable/config.local.json
+test-results
+playwright-report

@@ -28,7 +28,10 @@ export const catalogo: Produto[] = [
     largura: 60,
     modelo: "simples",
     ambiente: "Banheiro",
-    fotos: { preto: "/img/prod/60x60-preto.webp", branco: "/img/prod/60x60-branco.webp" },
+    fotos: {
+      preto: "/img/prod/60x60-preto.webp",
+      branco: "/img/prod/60x60-branco.webp",
+    },
     estudio: true,
     preco: { preto: 249.9, branco: 239.9 },
     peso: "3,5 kg",
@@ -51,7 +54,10 @@ export const catalogo: Produto[] = [
     largura: 50,
     modelo: "simples",
     ambiente: "Banheiro pequeno",
-    fotos: { preto: "/img/prod/50x50-preto.webp", branco: "/img/prod/50x50-branco.webp" },
+    fotos: {
+      preto: "/img/prod/50x50-preto.webp",
+      branco: "/img/prod/50x50-branco.webp",
+    },
     estudio: true,
     preco: { preto: 229.9, branco: 219.9 },
     peso: "3 kg",
@@ -63,7 +69,10 @@ export const catalogo: Produto[] = [
     largura: 40,
     modelo: "simples",
     ambiente: "Lavabo",
-    fotos: { preto: "/img/prod/40x40-preto.webp", branco: "/img/prod/40x40-branco.webp" },
+    fotos: {
+      preto: "/img/prod/40x40-preto.webp",
+      branco: "/img/prod/40x40-branco.webp",
+    },
     estudio: true,
   },
   {
@@ -73,7 +82,10 @@ export const catalogo: Produto[] = [
     largura: 60,
     modelo: "simples",
     ambiente: "Cozinha",
-    fotos: { preto: "/img/real/40x60-preto.webp", branco: "/img/real/40x60-branco.webp" },
+    fotos: {
+      preto: "/img/real/40x60-preto.webp",
+      branco: "/img/real/40x60-branco.webp",
+    },
     preco: { preto: 239.9, branco: 229.9 },
     peso: "2,8 kg",
   },
@@ -84,7 +96,10 @@ export const catalogo: Produto[] = [
     largura: 40,
     modelo: "simples",
     ambiente: "Banheiro",
-    fotos: { preto: "/img/real/60x40-preto.webp", branco: "/img/real/60x40-branco.webp" },
+    fotos: {
+      preto: "/img/real/60x40-preto.webp",
+      branco: "/img/real/60x40-branco.webp",
+    },
     preco: { preto: 239.9, branco: 229.9 },
     peso: "2,8 kg",
   },
@@ -106,7 +121,10 @@ export const catalogo: Produto[] = [
     largura: 80,
     modelo: "simples",
     ambiente: "Cozinha e lavanderia",
-    fotos: { preto: "/img/real/40x80-preto.webp", branco: "/img/real/40x80-branco.webp" },
+    fotos: {
+      preto: "/img/real/40x80-preto.webp",
+      branco: "/img/real/40x80-branco.webp",
+    },
     preco: { preto: 279.9, branco: 269.9 },
     peso: "4,8 kg",
   },
@@ -117,7 +135,10 @@ export const catalogo: Produto[] = [
     largura: 80,
     modelo: "simples",
     ambiente: "Cozinha e sala",
-    fotos: { preto: "/img/real/60x80-preto.webp", branco: "/img/real/60x80-branco.webp" },
+    fotos: {
+      preto: "/img/real/60x80-preto.webp",
+      branco: "/img/real/60x80-branco.webp",
+    },
   },
   {
     id: "60x80-grade",
@@ -126,7 +147,10 @@ export const catalogo: Produto[] = [
     largura: 80,
     modelo: "grade",
     ambiente: "Casa térrea",
-    fotos: { preto: "/img/real/60x80-grade-preto.webp", branco: "/img/real/60x80-grade-branco.webp" },
+    fotos: {
+      preto: "/img/real/60x80-grade-preto.webp",
+      branco: "/img/real/60x80-grade-branco.webp",
+    },
   },
   {
     id: "60x120",
@@ -142,9 +166,8 @@ export const catalogo: Produto[] = [
 ];
 
 export function acharPadrao(largura: number, altura: number, modelo: Modelo) {
-  return (
-    catalogo.find((p) => p.largura === largura && p.altura === altura && p.modelo === modelo) ??
-    catalogo.find((p) => p.largura === largura && p.altura === altura)
+  return catalogo.find(
+    (p) => p.largura === largura && p.altura === altura && p.modelo === modelo,
   );
 }
 

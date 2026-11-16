@@ -9,9 +9,17 @@ export const site = {
   // Links das lojas oficiais. Enquanto estiverem vazios, os botões de compra
   // levam para a seção "Como comprar".
   lojas: [
-    { id: "tiktok", nome: "TikTok Shop", url: "" },
-    { id: "shopee", nome: "Shopee", url: "" },
-    { id: "mercadolivre", nome: "Mercado Livre", url: "" },
+    { id: "shopee", nome: "Shopee", url: "https://br.shp.ee/Ajx2X93" },
+    {
+      id: "mercadolivre",
+      nome: "Mercado Livre",
+      url: "https://www.mercadolivre.com.br/pagina/dywjrqls",
+    },
+    {
+      id: "tiktok",
+      nome: "TikTok",
+      url: "https://www.tiktok.com/@maxxaluminio2026",
+    },
   ],
 
   // Canal do orçamento sob medida. Com um número de WhatsApp (só dígitos,

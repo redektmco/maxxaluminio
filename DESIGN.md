@@ -147,7 +147,7 @@ O sistema serve principalmente a quem consulta pelo celular durante a obra. Text
 
 **Key Characteristics:**
 
-- Fotografias reais e medidas em centímetros.
+- Fotografias reais no catálogo, ambiente ilustrativo identificado no hero e medidas em centímetros.
 - Tipografia única, títulos compactos e números tabulares nas dimensões.
 - Formas retas, contornos finos e controles com cantos discretos.
 - Janela basculante como interação de acesso às lojas.
@@ -166,7 +166,7 @@ Carvão (`ink`) para texto e seções escuras; papel (`paper`) para a base; bran
 
 Archivo Variable, hospedada localmente, atende a todos os papéis. O frontmatter registra os valores principais; o corpo mantém entrelinha aberta e os títulos usam espaçamento negativo.
 
-- **Display:** título inicial. Até (760px), usa `clamp(3.3rem, 10vw, 4.7rem)`; até (380px), (3rem); a partir de (1450px), (5.5rem).
+- **Display:** o hero fotográfico usa `clamp(3.6rem, 6.1vw, 6rem)`. Até (1100px), `clamp(3.6rem, 6.5vw, 4.5rem)`; até (900px), `clamp(2.7rem, 10.3vw, 3.8rem)`; até (340px), (2.3rem). O título branco destaca a segunda linha em âmbar.
 - **Headline:** títulos de seção, com quebra balanceada.
 - **Dimension:** medida comercial; números tabulares. No catálogo móvel, (1.9rem); até (380px), (2.25rem).
 - **Title:** cabeçalho do formulário. O guia de compra usa títulos de (1.6rem).
@@ -182,7 +182,7 @@ Catálogo em três colunas, duas até (760px) e uma até (380px). Lojas em três
 
 A maior parte da página usa alternância de superfícies e bordas. As sombras ficam no menu móvel, no desenho do simulador e nas janelas das lojas. Estas usam perspectiva de (1000px), moldura com `0 15px 28px #0003` e folha com `0 4px 10px #0004`; aberta, a folha recebe `0 28px 30px #0005`.
 
-O produto entra em (0.9s), imagens do catálogo ampliam em (0.5s) e folhas das lojas giram em (0.75s), com a curva registrada no sidecar. `prefers-reduced-motion` remove animações, transições e rotação das lojas; a seleção permanece visível por cor e borda.
+A fotografia do hero se acomoda em (1.3s), com escala de (1.025) a (1) e luminosidade de (0.85) a (1); imagens do catálogo ampliam em (0.5s) e folhas das lojas giram em (0.75s), com a curva registrada no sidecar. `prefers-reduced-motion` remove animações, transições e rotação das lojas; a seleção permanece visível por cor e borda.
 
 ## Shapes
 
@@ -190,8 +190,9 @@ Retângulos predominam: campos e detalhes de (2px), botões e imagens do catálo
 
 ## Components
 
+- **Hero fotográfico:** fotografia arquitetônica de ambiente, gerada a partir da referência do produto, identificada como “Ambiente ilustrativo”. Desktop com fotografia ampla, sombra lateral para leitura, título sobreposto, ação âmbar e ação de contorno. Até (900px), fotografia acima do texto sobre carvão; os dois caminhos continuam visíveis. A faixa inferior informa fabricação própria e aponta para os acabamentos. Imagem WebP local de aproximadamente (174kB); a origem e o prompt ficam em `.impeccable/assets/hero-architecture.json`.
 - **Botões:** três variantes — carvão, âmbar e contorno. Altura mínima de (54px), foco externo de (3px), deslocamento de (1px) ao pressionar. Links textuais têm altura mínima de (44px).
-- **Filtros e acabamento:** estado anunciado por `aria-pressed`; filtros selecionados invertem para carvão. Acabamento selecionado ganha contorno, superfície e marca de confirmação. A escolha de acabamento é compartilhada entre apresentação, catálogo, simulador e pedido.
+- **Filtros e acabamento:** estado anunciado por `aria-pressed`; filtros selecionados invertem para carvão. Acabamento selecionado ganha contorno, superfície e marca de confirmação. A escolha de acabamento é compartilhada entre catálogo, simulador e pedido.
 - **Cartões:** fotografia sobre papel, indicação do modelo e medida comercial em altura × largura. A ação preenche modelo e dimensões exatos no pedido. O catálogo inicia com seis modelos e permite expandir ou filtrar.
 - **Campos e pedido:** rótulos persistentes, unidade ao lado do número, borda vermelha e texto em erros. Foco de (2px) nos campos. O formulário valida as faixas de consulta, distingue medida do catálogo de avaliação técnica e prepara uma mensagem copiável. Com o canal atual, a cópia exige envio posterior no chat da loja; não representa pedido enviado.
 - **Navegação:** links sobre carvão. Até (760px), botão de menu com `aria-expanded`; escolher um destino fecha o menu. Escape fecha e devolve foco ao botão.

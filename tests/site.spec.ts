@@ -69,7 +69,7 @@ test("carrega sem erros, com imagens reais e sem overflow", async ({
   page.on("pageerror", (error) => errors.push(error.message));
   await expect(page).toHaveTitle(/Maxx Alumínio/);
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "A janela certa.",
+    "Mais luz.",
   );
   for (const img of await page.locator("img").all()) {
     await img.scrollIntoViewIfNeeded();
@@ -111,10 +111,11 @@ test("sincroniza acabamento e leva a seleção correta ao pedido", async ({
 }) => {
   const catalog = page.locator("#catalogo");
   await catalog.getByRole("button", { name: "Branco", exact: true }).click();
-  await expect(page.locator(".hero-image img")).toHaveAttribute(
-    "src",
-    "/img/compare-branco.webp",
-  );
+  await expect(
+    page
+      .locator(".request-form")
+      .getByRole("button", { name: "Branco", exact: true }),
+  ).toHaveAttribute("aria-pressed", "true");
   await catalog.getByRole("button", { name: "Com grade", exact: true }).click();
   await expect(catalog.locator("article").first()).toContainText(
     "Foto na cor preto",

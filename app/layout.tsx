@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@fontsource-variable/archivo";
 import "./globals.css";
+import "./hero.css";
 
 export const metadata: Metadata = {
   title: "Maxx Alumínio | Janelas na medida da sua obra",

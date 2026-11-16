@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-16T18:26:36.691542Z",
+  "generatedAt": "2026-11-16T18:44:34.130Z",
   "title": "Design System: Maxx Alumínio",
   "extensions": {
     "colorMeta": {
@@ -255,9 +255,9 @@
         "purpose": "Mudanças de fundo e cor dos controles."
       },
       {
-        "name": "product-arrive",
-        "value": "0.9s",
-        "purpose": "Entrada do produto com recorte e translação de 12px."
+        "name": "hero-daylight",
+        "value": "1.3s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Entrada da fotografia do hero com escala 1.025 a 1 e luminosidade 0.85 a 1; removida em prefers-reduced-motion."
       },
       {
         "name": "catalog-image",
@@ -292,7 +292,16 @@
         "name": "wide",
         "value": "1450px"
       }
-    ]
+    ],
+    "photography": {
+      "hero": {
+        "asset": "public/img/hero-architecture.webp",
+        "type": "generated architectural visualization",
+        "disclosure": "Ambiente ilustrativo",
+        "provenance": ".impeccable/assets/hero-architecture.json",
+        "responsive": "Sobreposta em desktop; fotografia acima do texto até 900px."
+      }
+    }
   },
   "components": [
     {
@@ -380,7 +389,7 @@
     "northStar": "Medida e produto real",
     "overview": "Síntese descritiva da implementação: fotografia real, dimensões legíveis e controles diretos. O preto, o branco e o âmbar acompanham o logo oficial. A apresentação combina áreas claras para comparação com áreas escuras para navegação e acesso aos canais oficiais.\n\nO sistema serve principalmente a quem consulta pelo celular durante a obra. Texto simples, unidades explícitas, foco visível e alternativas ao arraste mantêm as decisões acessíveis.",
     "keyCharacteristics": [
-      "Fotografias reais e medidas em centímetros.",
+      "Fotografias reais no catálogo, ambiente ilustrativo identificado no hero e medidas em centímetros.",
       "Tipografia única, títulos compactos e números tabulares nas dimensões.",
       "Formas retas, contornos finos e controles com cantos discretos.",
       "Janela basculante como interação de acesso às lojas."

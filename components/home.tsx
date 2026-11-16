@@ -14,6 +14,7 @@ import {
 import { site } from "@/lib/site";
 import { useMedida } from "./medida";
 import { BuyingGuide, FinishComparison, WindowSizer } from "./window-tools";
+import { Hero } from "./hero";
 
 function Arrow({
   diagonal = false,
@@ -149,69 +150,6 @@ function Header() {
         </nav>
       </div>
     </header>
-  );
-}
-
-function Hero() {
-  const { cor } = useMedida();
-  return (
-    <section className="hero wrap" aria-labelledby="hero-title">
-      <div className="hero-copy">
-        <h1 id="hero-title">
-          A janela certa.
-          <br />
-          Na medida
-          <br />
-          da sua <span>obra.</span>
-        </h1>
-        <p>
-          Do banheiro à cozinha. Janelas de alumínio direto do fabricante, em
-          medidas padrão ou feitas para o seu projeto.
-        </p>
-        <div className="hero-actions">
-          <a className="button button-dark" href="#catalogo">
-            Ver janelas <Arrow />
-          </a>
-          <a className="text-link" href="#pedido">
-            Fazer sob medida <Arrow diagonal />
-          </a>
-        </div>
-        <div className="origin">
-          <span className="status-dot" />
-          Fabricação própria em {site.cidade}
-        </div>
-      </div>
-      <div className="hero-product">
-        <div className="product-spec">
-          <span>Basculante maxim-ar</span>
-          <span>Linha 25</span>
-        </div>
-        <div className="hero-image">
-          <Image
-            src={`/img/compare-${cor}.webp`}
-            alt={`Janela basculante maxim-ar ${cor === "preto" ? "preta" : "branca"}, com vidro mini boreal e folha aberta`}
-            width={800}
-            height={640}
-            priority
-            sizes="(max-width: 760px) 90vw, 48vw"
-          />
-          <div className="dimension-height" aria-hidden="true">
-            <span>60 cm</span>
-          </div>
-          <div className="dimension-width" aria-hidden="true">
-            <span>60 cm</span>
-          </div>
-        </div>
-        <div className="hero-product-bottom">
-          <Colors />
-          <p>
-            Vidro mini boreal.
-            <br />
-            Luz, com privacidade.
-          </p>
-        </div>
-      </div>
-    </section>
   );
 }
 

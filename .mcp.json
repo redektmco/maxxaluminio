@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "curated": {
+      "type": "http",
+      "url": "https://curated.design/api/mcp/"
+    }
+  }
+}
